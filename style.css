@@ -157,3 +157,20 @@ h1 {
         /* Adjust button padding */
     }
 }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to the modal content */
+.modal-content p {
+    animation: fadeIn 1.5s ease-in-out;
+    /* Duration of the fade-in animation */
+}
