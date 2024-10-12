@@ -1,16 +1,25 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e0f7fa, #ffffff);
+    background-size: cover;
+    /* Make sure the background covers the entire viewport */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
-    /* Prevent scrollbars from showing */
     position: relative;
-    /* Position relative for absolute positioning of children */
+    width: 100vw;
+    /* Add this to ensure full width */
 }
+
+/* Prevent horizontal scrolling due to overflow */
+html,
+body {
+    overflow-x: hidden;
+}
+
 
 .container {
     text-align: center;
