@@ -24,6 +24,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Fix for mobile browsers to prevent extra scrolling */
+@media (max-height: 900px) {
+    body {
+        height: calc(100vh - 1px);
+    }
+}
 
 
 .container {
