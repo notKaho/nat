@@ -1,8 +1,12 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e0f7fa, #ffffff);
+    background-attachment: fixed;
+    /* Keep the background fixed to avoid shifting */
     background-size: cover;
-    /* Make sure the background covers the entire viewport */
+    /* Ensure the background covers the entire viewport */
+    background-repeat: no-repeat;
+    /* Prevent background from repeating */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,15 +14,16 @@ body {
     margin: 0;
     overflow: hidden;
     position: relative;
-    width: 100vw;
-    /* Add this to ensure full width */
 }
 
-/* Prevent horizontal scrolling due to overflow */
+/* Prevent any extra space or scrolling */
 html,
 body {
+    padding: 0;
+    margin: 0;
     overflow-x: hidden;
 }
+
 
 
 .container {
