@@ -23,3 +23,13 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+// Function to set the height of the body to the actual viewport height
+function setBodyHeight() {
+    document.body.style.height = window.innerHeight + 'px';
+}
+
+// Set the height on load and resize
+window.addEventListener('load', setBodyHeight);
+window.addEventListener('resize', setBodyHeight);
+

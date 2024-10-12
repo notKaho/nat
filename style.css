@@ -2,19 +2,16 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e0f7fa, #ffffff);
     background-attachment: fixed;
-    /* Keep the background fixed to avoid shifting */
     background-size: cover;
-    /* Ensure the background covers the entire viewport */
     background-repeat: no-repeat;
-    /* Prevent background from repeating */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     overflow: hidden;
     position: relative;
 }
+
 
 /* Prevent any extra space or scrolling */
 html,
