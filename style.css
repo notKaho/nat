@@ -142,6 +142,10 @@ h1 {
         padding: 10px 20px;
         /* Adjust button padding */
     }
+
+    .close {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -155,6 +159,10 @@ h1 {
         /* Smaller button text */
         padding: 10px 15px;
         /* Adjust button padding */
+    }
+
+    .close {
+        display: none;
     }
 }
 
