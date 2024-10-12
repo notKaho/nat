@@ -1,0 +1,159 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    /* Prevent scrollbars from showing */
+    position: relative;
+    /* Position relative for absolute positioning of children */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    /* Position relative to stack above floating images */
+    z-index: 10;
+    /* Higher z-index to ensure it appears above floating images */
+    padding: 0 20px;
+    /* Add padding for smaller screens */
+}
+
+h1 {
+    font-size: 2.8rem;
+    /* Increase font size */
+    color: #4db6ac;
+    /* Change to a lighter teal color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    font-weight: 700;
+    /* Bold weight for prominence */
+}
+
+.present-btn {
+    background-color: #00bfa5;
+    color: #ffffff;
+    /* Keep text color white for contrast */
+    border: none;
+    padding: 12px 23px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    /* Medium weight for the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow for a 3D effect */
+}
+
+.present-btn:hover {
+    background-color: #00897b;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    z-index: 15;
+    /* Higher than everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for better visibility */
+    backdrop-filter: blur(5px);
+    /* Optional blur effect */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    color: #00bfa5;
+    /* Keep modal text a bright teal color */
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    /* Medium weight for modal text */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+    /* Darken close button on hover */
+}
+
+/* Floating Image Styles */
+.floating-image {
+    position: absolute;
+    bottom: -100px;
+    /* Start below the screen */
+    animation: float 10s linear infinite;
+    /* Adjust the overall float speed */
+    pointer-events: none;
+    /* Prevent mouse interaction */
+    z-index: 5;
+    /* Lower z-index to ensure images are below text and button */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+        /* Start fully visible */
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        /* Move up off the screen */
+        opacity: 0;
+        /* Fade out */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+        /* Reduce font size for smaller screens */
+    }
+
+    .present-btn {
+        font-size: 1.5rem;
+        /* Smaller button text */
+        padding: 10px 20px;
+        /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        /* Further reduce font size */
+    }
+
+    .present-btn {
+        font-size: 1.2rem;
+        /* Smaller button text */
+        padding: 10px 15px;
+        /* Adjust button padding */
+    }
+}

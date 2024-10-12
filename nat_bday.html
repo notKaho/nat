@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code 101</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="symbol-background">
+        <div class="circle"></div>
+        <div class="container">
+            <h1>"happy" 21<sup>st</sup>
+                <br>
+                natalie / toffuukiis
+            </h1>
+            <button id="presentButton" class="present-btn">🎁</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>🎉 keyboard 🎉</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to create floating images
+        function createFloatingImages() {
+            const numImages = 15; // Set a fixed number of images
+            const body = document.body;
+
+            for (let i = 0; i < numImages; i++) {
+                const img = document.createElement('img');
+                img.src = 'txt.jpg'; // Ensure this image is in the same folder
+                img.classList.add('floating-image');
+
+                // Set random position and size
+                img.style.left = Math.random() * 100 + 'vw'; // Position across the whole viewport width
+                img.style.opacity = Math.random(); // Random opacity
+                img.style.width = (Math.random() * 30 + 30) + 'px'; // Random size between 30px and 80px
+                img.style.animationDuration = (Math.random() * 3 + 5) + 's'; // Duration between 5s and 8s
+                img.style.animationDelay = (Math.random() * 5) + 's'; // Random delay
+
+                body.appendChild(img);
+            }
+        }
+
+        // Call the function to create images
+        createFloatingImages();
+    </script>
+</body>
+
+</html>
