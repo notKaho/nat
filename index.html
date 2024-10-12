@@ -31,28 +31,24 @@
 
     <script src="script.js"></script>
     <script>
-        // Function to create floating images
         function createFloatingImages() {
-            const numImages = 15; // Set a fixed number of images
+            const numImages = 15;
             const body = document.body;
 
             for (let i = 0; i < numImages; i++) {
                 const img = document.createElement('img');
-                img.src = 'txt.jpg'; // Ensure this image is in the same folder
+                img.src = 'txt.jpg';
                 img.classList.add('floating-image');
 
-                // Set random position and size
-                img.style.left = Math.random() * 100 + 'vw'; // Position across the whole viewport width
-                img.style.opacity = Math.random(); // Random opacity
-                img.style.width = (Math.random() * 30 + 30) + 'px'; // Random size between 30px and 80px
-                img.style.animationDuration = (Math.random() * 3 + 5) + 's'; // Duration between 5s and 8s
-                img.style.animationDelay = (Math.random() * 5) + 's'; // Random delay
+                img.style.left = Math.random() * 100 + 'vw';
+                img.style.opacity = Math.random();
+                img.style.width = (Math.random() * 30 + 30) + 'px';
+                img.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                img.style.animationDelay = (Math.random() * 5) + 's';
 
                 body.appendChild(img);
             }
         }
-
-        // Call the function to create images
         createFloatingImages();
     </script>
 </body>
